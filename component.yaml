@@ -1,0 +1,10 @@
+name: production-demo
+subcomponents:
+  - name: cloud-native # In-cluster monitoring and service-mesh tooling
+    source: https://github.com/timfpark/fabrikate-cloud-native
+    method: git
+    version: master
+  - name: bookinfo # Istio BookInfo application - wrapped in Fabrikate component
+    source: https://github.com/evanlouie/fabrikate-bookinfo
+    method: git
+    version: 2.0.0
