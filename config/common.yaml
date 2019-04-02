@@ -5,6 +5,12 @@ subcomponents:
     namespace: bookinfo
   cloud-native:
     subcomponents:
+      jaeger:
+        subcomponents:
+          jaeger:
+            config:
+              spark:
+                schedule: "*/5 * * * *"
       istio:
         config:
           global:
