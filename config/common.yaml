@@ -5,6 +5,16 @@ subcomponents:
     namespace: bookinfo
   cloud-native:
     subcomponents:
+      istio:
+        config:
+          global:
+            k8sIngress:
+              enabled: true # Create the auto-generated ingress
+            tracer:
+              zipkin:
+                address: "zipkin.jaeger.svc.cluster.local:9411"
+          pilot:
+            traceSampling: 100
       prometheus-grafana:
         subcomponents:
           prometheus:
