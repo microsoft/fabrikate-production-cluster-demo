@@ -1,4 +1,6 @@
 name: production-demo
+generator: "static"
+path: "./manifests"
 subcomponents:
   - name: cloud-native # In-cluster monitoring and service-mesh tooling
     source: https://github.com/timfpark/fabrikate-cloud-native
