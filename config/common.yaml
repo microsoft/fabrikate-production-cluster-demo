@@ -360,8 +360,8 @@ subcomponents:
                           record: cluster:node_cpu:ratio
                 alerts:
                   groups:
-                    - name: kubernetes-absent
-                      rules:
+                        # - name: kubernetes-absent
+                        # rules:
                         #- alert: AlertmanagerDown
                         #annotations:
                         #message: Alertmanager has disappeared from Prometheus target discovery.
@@ -773,13 +773,13 @@ subcomponents:
                             severity: warning
                         - alert: KubeletTooManyPods
                           annotations:
-                            message: Kubelet {{ $labels.instance }} is running {{ $value }} Pods, close to the limit of 30.
+                            message: Kubelet is running too many Pods, close to the limit of 30.
                             runbook_url: https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-kubelettoomanypods
                           expr: |
                             kubelet_running_pod_count{kubernetes_io_role="agent"} > 30 * 0.6
                           for: 1m
                           labels:
-                            severity: warning
+                            severity: critical
                         - alert: KubeAPILatencyHigh
                           annotations:
                             message: The API server has a 99th percentile latency of {{ $value }} seconds for {{ $labels.verb }} {{ $labels.resource }}.
