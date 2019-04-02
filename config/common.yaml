@@ -371,15 +371,16 @@ subcomponents:
                         #for: 15m
                         #labels:
                         #severity: critical
-                        - alert: CoreDNSDown
-                          annotations:
-                            message: CoreDNS has disappeared from Prometheus target discovery.
-                            runbook_url: https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-corednsdown
-                          expr: |
-                            absent(up{job="kube-dns"} == 1)
-                          for: 15m
-                          labels:
-                            severity: critical
+                        #- alert: CoreDNSDown
+                        #  annotations:
+                        #    message: CoreDNS has disappeared from Prometheus target discovery.
+                        #    runbook_url: https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-corednsdown
+                        #  expr: |
+                        #    absent(up{job="kube-dns"} == 1)
+                        #  for: 15m
+                        #  labels:
+                        #    severity: critical
+                        #
                         #- alert: KubeAPIDown
                         #annotations:
                         #message: KubeAPI has disappeared from Prometheus target discovery.
@@ -775,7 +776,7 @@ subcomponents:
                             message: Kubelet {{ $labels.instance }} is running {{ $value }} Pods, close to the limit of 30.
                             runbook_url: https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-kubelettoomanypods
                           expr: |
-                            kubelet_running_pod_count{job="kubelet"} > 30 * 0.6
+                            kubelet_running_pod_count{kubernetes_io_role="agent"} > 30 * 0.6
                           for: 1m
                           labels:
                             severity: warning
