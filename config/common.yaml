@@ -772,11 +772,11 @@ subcomponents:
                             severity: warning
                         - alert: KubeletTooManyPods
                           annotations:
-                            message: Kubelet {{ $labels.instance }} is running {{ $value }} Pods, close to the limit of 110.
+                            message: Kubelet {{ $labels.instance }} is running {{ $value }} Pods, close to the limit of 30.
                             runbook_url: https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-kubelettoomanypods
                           expr: |
-                            kubelet_running_pod_count{job="kubelet"} > 110 * 0.9
-                          for: 15m
+                            kubelet_running_pod_count{job="kubelet"} > 30 * 0.6
+                          for: 1m
                           labels:
                             severity: warning
                         - alert: KubeAPILatencyHigh
