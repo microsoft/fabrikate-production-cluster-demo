@@ -8,3 +8,6 @@ subcomponents:
     source: https://github.com/evanlouie/fabrikate-bookinfo
     method: git
     version: 2.0.0
+  - name: azure-keyvault-flexvolume # Azure KeyVault FlexVolume support
+    source: https://github.com/bnookala/fabrikate-keyvault-flexvolume
+    method: git
