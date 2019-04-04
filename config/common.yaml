@@ -10,7 +10,7 @@ subcomponents:
           jaeger:
             config:
               spark:
-                schedule: "*/5 * * * *"
+                schedule: "5 * * * *"
       istio:
         config:
           global:
