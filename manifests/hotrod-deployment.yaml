@@ -5,7 +5,7 @@ metadata:
     app.kubernetes.io/component: hotrod
     app.kubernetes.io/instance: jaeger
   name: jaeger-hotrod
-  namespace: jaeger
+  namespace: hotrod
 spec:
   replicas: 1
   selector:
