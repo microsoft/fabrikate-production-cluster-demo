@@ -6,7 +6,7 @@ spec:
   hosts:
     - "*"
   gateways:
-    - bookinfo-gateway
+    - bookinfo/bookinfo-gateway
   http:
     - match:
         - uri:
