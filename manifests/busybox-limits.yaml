@@ -6,7 +6,7 @@ metadata:
   name: limit-test
   namespace: default
 spec:
-  replicas: 20
+  replicas: 1
   selector:
     matchLabels:
       run: limit-test

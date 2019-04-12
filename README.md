@@ -2,12 +2,18 @@
 
 [![Build Status](https://dev.azure.com/epicstuff/fabrikate-production-cluster-demo-gitops/_apis/build/status/Microsoft.fabrikate-production-cluster-demo?branchName=master)](https://dev.azure.com/epicstuff/fabrikate-production-cluster-demo-gitops/_build/latest?definitionId=58&branchName=master)
 
-This is production demo of what a cluster level Fabrikate High-Level-Definition (HLD) might look like.
+This is production demo of what a cluster level Fabrikate High-Level-Definition (HLD) might look like. You can view applications presented by the demo cluster here: https://demo.jack5on.io/productpage.
 
 It includes:
 
 - [Cloud-Native](https://github.com/timfpark/fabrikate-cloud-native/) - Our standardized set of in-cluster monitoring tools.
 - [BookInfo](https://github.com/evanlouie/fabrikate-bookinfo/) - A sample multi-language microservices based application.
+- Jaeger Hotrod - A sample application used to demonstrate Jaeger tracing.
+
+# Deploy it yourself
+
+If you'd like to run this set of applications youself, please refer to our [documentation](./DIY.md).
+
 
 # Contributing
 
