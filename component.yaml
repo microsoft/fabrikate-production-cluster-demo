@@ -3,12 +3,17 @@ generator: "static"
 path: "./manifests"
 subcomponents:
   - name: cloud-native # In-cluster monitoring and service-mesh tooling
-    source: https://github.com/timfpark/fabrikate-cloud-native
+    source: https://github.com/microsoft/fabrikate-definitions.git
+    path: definitions/fabrikate-cloud-native
     method: git
-    version: master
+    branch: master
   - name: bookinfo # Istio BookInfo application - wrapped in Fabrikate component
-    source: https://github.com/evanlouie/fabrikate-bookinfo
+    source: https://github.com/microsoft/fabrikate-definitions.git
+    path: definitions/fabrikate-bookinfo
     method: git
+    branch: master
   - name: azure-keyvault-flexvolume # Azure KeyVault FlexVolume support
-    source: https://github.com/bnookala/fabrikate-keyvault-flexvolume
+    source: https://github.com/microsoft/fabrikate-definitions.git
+    path: definitions/fabrikate-keyvault-flexvolume
     method: git
+    branch: master
