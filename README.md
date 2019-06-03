@@ -11,7 +11,7 @@ It includes:
 
 # Deploy it yourself
 
-If you'd like to run this set of applications youself, please refer to our [documentation](./DIY.md).
+If you'd like to run this set of applications yourself, please refer to our [documentation](./DIY.md).
 
 # Contributing
 
