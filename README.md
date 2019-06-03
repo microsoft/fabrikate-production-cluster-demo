@@ -8,12 +8,10 @@ It includes:
 
 - [Cloud-Native](https://github.com/timfpark/fabrikate-cloud-native/) - Our standardized set of in-cluster monitoring tools.
 - [BookInfo](https://github.com/evanlouie/fabrikate-bookinfo/) - A sample multi-language microservices based application.
-- Jaeger Hotrod - A sample application used to demonstrate Jaeger tracing.
 
 # Deploy it yourself
 
 If you'd like to run this set of applications youself, please refer to our [documentation](./DIY.md).
-
 
 # Contributing
 
