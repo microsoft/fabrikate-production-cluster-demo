@@ -1,6 +1,6 @@
 # Deploy it yourself
 
-This documentation intends to show how you can set up your own cluster that demonstrates Bedrock,  Fabrikate, and the Cloud Native Stack. This documentation is _not_ comprehensive, and will refer you
+This documentation intends to show how you can set up your own cluster that demonstrates Bedrock, Fabrikate, and the Cloud Native Stack. This documentation is _not_ comprehensive, and will refer you
 to existing documentation, where necessary.
 
 Additionally, this documentation will demonstrate setting up and deploying a _simple_ cluster. In a production setting, you will want to deploy an intermediary
@@ -59,7 +59,7 @@ You've now generated Kubernetes manifests from Fabrikate components. The generat
 /code $ git push origin HEAD
 ```
 
-The generated manifests will now be available in the flux enabled repository:  https://github.com/username/my-flux-gitops-repository.git
+The generated manifests will now be available in the flux enabled repository: https://github.com/username/my-flux-gitops-repository.git
 
 ## Provision a Kubernetes cluster using Bedrock
 
